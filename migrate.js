@@ -1,4 +1,4 @@
-require('dotenv').config(); // Загружаем переменные окружения
+require('dotenv').config(); 
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Product = require('./models/Product');
@@ -11,7 +11,7 @@ const users = [
     password: "qwerty123",
     registed_at: "2024-05-25",
     role_id: 0,
-    email: "admin@example.com", // Добавьте email
+    email: "admin@example.com", 
   },
   {
     id: "93bf",
@@ -19,7 +19,7 @@ const users = [
     password: "qwerty123",
     registed_at: "2053-03-14 23:01",
     role_id: 1,
-    email: "user@example.com", // Добавьте email
+    email: "user@example.com", 
   },
   {
     id: "c0ab",

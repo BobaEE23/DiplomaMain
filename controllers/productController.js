@@ -59,25 +59,23 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
-// Удалить продукт
-// Удалить продукт
-// Удалить продукт
+
 exports.deleteProduct = async (req, res) => {
   try {
-    console.log("Attempting to delete product with ID:", req.params.id); // Логируем ID продукта
+    
 
-    // Ищем продукт по ID
+    
     let product = await Product.findById(req.params.id);
     if (!product) {
       return res.status(404).json({ msg: 'Продукт не найден' });
     }
 
-    // Удаляем продукт с использованием deleteOne
+    
     await Product.deleteOne({ _id: req.params.id });
 
     res.json({ msg: 'Продукт удален' });
   } catch (err) {
-    console.error('Ошибка при удалении данных:', err.message); // Логируем ошибку
+    console.error('Ошибка при удалении данных:', err.message); 
     res.status(500).send('Ошибка сервера');
   }
 };
